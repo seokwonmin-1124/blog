@@ -1,14 +1,14 @@
 <template>
     <div class="btns">
         <button class="button is-small" @click="allSee()">전체 항목 보기</button>
-        <span v-for="(category, index) in categories" :key="index">
-            <button class="button is-small" @click="changeDisplay(index)">{{ categories[index] }}</button>
+        <span v-for="(category, i) in categories" :key="i">
+            <button class="button is-small" @click="changeDisplay(i)">{{ category }}</button>
         </span>
     </div>
 </template>
 
 <script>
-import data from './data';
+import data from './json/data.js';
 
     export default {
         data() {

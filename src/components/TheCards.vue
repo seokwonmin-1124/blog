@@ -1,14 +1,18 @@
 <template>
-    <div v-for="(item, index) in categories" v-show="show[index]" :key="index">
+    <div v-for="(item, i) in categories" v-show="show[i]" :key="i">
         <div class="box">
-            <p class="title">{{ item }}</p>
-            <p class="innerP">{{ msg[index] }}</p>
+            <p>
+                <span class="title">{{ item }}</span>
+                <span class="tag is-light">programming</span>
+                <span class="tag is-light">{{ item }}</span>
+            </p>
+            <p class="innerP">{{ msg[i] }}</p>
         </div>
     </div>
 </template>
 
 <script>
-import data from './data'
+import data from './json/data'
 
     export default {
         name: 'TheCards',

@@ -6,12 +6,7 @@
         <TheCards />
     </div>
     <footer>
-        <span>Made by&nbsp;</span>
-        <a href="https://github.com/seokwonmin-1124">LESH</a>
-        <span>&nbsp;design with&nbsp;</span>
-        <a href="https://bulma.io/">Bulma</a>
-        <span>, made with&nbsp;</span>
-        <a href="https://vuejs.org">Vue.js</a>
+        <span>Made by <a href="https://github.com/seokwonmin-1124">LESH</a> with <a href="https://bulma.io/">Bulma</a></span>
     </footer>
 </TransitionGroup>
 </template>
@@ -23,7 +18,6 @@ import TheCards from './components/TheCards.vue';
 export default {
     name: 'App',
     data() {
-        
     },
     components: {
     TheBtns,
@@ -34,6 +28,11 @@ export default {
 
 <style>
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
 
 .vue-enter-active, .vue-leave-active {
     transition: all 0.2s ease-in-out;
@@ -82,8 +81,24 @@ export default {
     text-decoration: underline;
 }
 
+.tag {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
 .innerP {
     color: gray;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    width: 608px;
+    line-height: 1.2;
+    height: 3.7em;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 footer {
